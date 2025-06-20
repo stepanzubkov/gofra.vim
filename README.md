@@ -7,6 +7,9 @@ This plugin is in development stage now.
 Following instructions just copies `syntax` and `ftdetect` folders from this repo to vim or neovim config folder.
 You can do it manually. You might also want to delete the repository folder after installation.
 
+**Don't forget to enable syntax highlight in vim/neovim by putting** `syntax on` **in your config file or type**
+ `:syntax on` **inside editor**.
+
 ### Linux && MacOS 
 
 For vim:
