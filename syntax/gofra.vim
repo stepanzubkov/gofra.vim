@@ -3,8 +3,8 @@ if exists("b:current_syntax")
 endif
 
 syn keyword gofraBoolean true false
-syn keyword gofraType int ptr bool void
-syn keyword gofraStatement if while do end inline extern global memory 
+syn keyword gofraType int bool void
+syn keyword gofraStatement if while do end inline extern global var call
 syn match gofraPreprocessorDirective /^\s*\zs#\s*\(include\|macro\|endif\|ifdef\|define\)\>\s*/
 syn keyword gofraOperator + - * / // == != < > <= >= % ?> !<
 syn keyword gofraBuiltinFunction dec inc swap copy drop
@@ -26,6 +26,7 @@ syn keyword gofraTodo FIXME NOTE TODO OPTIMIZE XXX HACK contained
 
 let b:current_syntax = "gofra"
 
+" NOTE: Type `:h group-name` in vim to get help about last argument of `hi` command
 hi def link gofraBoolean               Boolean
 hi def link gofraType                  Type
 hi def link gofraPreprocessorDirective PreProc
