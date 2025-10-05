@@ -5,7 +5,7 @@ endif
 syn keyword gofraBoolean true false
 syn keyword gofraType int bool void
 syn keyword gofraStatement if while do end inline extern global var call
-syn match gofraPreprocessorDirective /^\s*\zs#\s*\(include\|macro\|endif\|ifdef\|define\)\>\s*/
+syn match gofraPreprocessorDirective /\s*\zs#\<\(include\|macro\|endif\|ifdef\|define\)\>\s*/
 syn keyword gofraOperator + - * / // == != < > <= >= % ?> !<
 syn keyword gofraBuiltinFunction dec inc swap copy drop
 syn keyword gofraBuiltinFunction syscall0 syscall1 syscall2 syscall3 syscall4 syscall5 syscall6
