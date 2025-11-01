@@ -3,11 +3,18 @@ if exists("b:current_syntax")
 endif
 
 syn keyword gofraBoolean true false
-syn keyword gofraType int bool void
-syn keyword gofraStatement if while do end inline extern global var call
+syn keyword gofraType int bool void char
+syn keyword gofraStatement if while do end inline extern global var call struct
 syn match gofraPreprocessorDirective /\s*\zs#\<\(include\|macro\|endif\|ifdef\|define\)\>\s*/
 syn keyword gofraOperator + - * / // == != < > <= >= % ?> !<
-syn keyword gofraBuiltinFunction dec inc swap copy drop
+syn keyword gofraBuiltinFunction dec inc swap copy drop assert
+
+" TODO: Create a script for parsing all stdlib functions from official gofra repository
+
+" functions from gofra std library os/io.gof
+syn keyword gofraBuiltinFunction print print_fd input input_fd println eprint eprint_fatal print_integer print_integer_fd
+
+" syscall-related functions
 syn keyword gofraBuiltinFunction syscall0 syscall1 syscall2 syscall3 syscall4 syscall5 syscall6
 syn keyword gofraBuiltinFunction  sc_syscall sc_exit sc_fork sc_write sc_read sc_open sc_close
 
